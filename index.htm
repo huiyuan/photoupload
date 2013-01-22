@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Photo API Frontend</title>
+<meta charset="UTF-8" />
+<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="script.js"></script>
+</head>
+<body>
+<ul id="nav">
+	<div id="nav-div">
+	<li><a href="#" id="upload">Upload Photo</a></li>
+	<li><a href="#" id="view_by_id">View by ID</a></li>
+	<li><a href="#" id="view_multiple">View Multiple</a></li>
+	<li><a href="#" id="view_multiple_by_tags">View Multiple by Tags</a></li>
+	<li><a href="#" id="delete">Delete Photo</a></li>
+	</div>
+</ul>
+
+<div id="warning" class="page">
+	<img src="spinner.gif" alt="loading" />
+	<br />
+	<p>The application is initializing. Javascript must be enabled.</p>
+</div>
+<div id="intro" class="page">
+		<h1>Photo API frontend demo.</h1>
+		<p>This is an example of a frontend which utilizes the specified REST API.</p>
+		<p>Please be curteous with anything you upload!</p>
+</div>
+<div id="upload_page" class="page">
+	<div><span>title: </span><input type="text" id="title" /></div>
+	<div><span>file: </span><input type="file" id="upload_image" name="files[]" multiple /></div>
+	<div><span>description: </span><input type="text" id="description" /></div>
+	<div><span>csv tags: </span><input type="text" id="tags" placeholder="list, different, tags"/></div>
+	<div><span>edit token: </span><input type="text" id="token" /></div>
+	<button id="upload_button">upload</button>
+</div>
+
+<div id="view_by_id_page" class="page">
+	<div><span>id: </span><input type="text" id="view_photo_id" /></div>
+	<button id="view_by_id_button">view</button>
+</div>
+
+<div id="view_multiple_page" class="page">
+	<div><span>start image pagination row: </span><input type="text" id="multiple_image_index" /></div>
+	<div><span>count (&lt;=50): </span><input typev"text" id="multiple_count" /></div>
+	<button id="view_multiple_button">view</button>
+</div>
+
+<div id="view_multiple_by_tags_page" class="page">
+	<div><span>start image index: </span><input type="text" id="tags_image_index" /></div>
+	<div><span>count (&lt;=50): </span><input type="text" id="tags_count" /></div>
+	<div><span>csv tag intersection: </span><input type="text" id="tags_tags" /></div>
+	<button id="view_tags_button">view</button>
+</div>
+
+<div id="delete_page" class="page">
+	<div><span>id: </span><input type="text" id="delete_id" /></div>
+	<div><span>token: </span><input type="text" id="delete_token" /></div>
+	<button id="delete_button">delete</button>
+</div>
+
+<div id="content">
+</div>
+</body>
+</html>

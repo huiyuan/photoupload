@@ -1,0 +1,1 @@
+There's one bug in my assignment. if you upload a file with .jpg type, it will be recognized to be a jpeg file. I printed out the original $image, the content shows that the data is a jpeg type. And I consulted a TA, he said it won't be a problem. Also it works fine for other image types.
